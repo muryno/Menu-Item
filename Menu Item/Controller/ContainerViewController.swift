@@ -53,10 +53,7 @@ class ContainerViewController: UIViewController {
                 self.centerController.view.frame.origin.x = self.centerController.view.frame.width - 80
             }, completion: nil)
         }else{
-            UIView.animate(withDuration: 0.8, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
-                        self.centerController.view.frame.origin.x = 0
-                    }, completion: nil)
-            
+    
             
                 UIView.animate(withDuration: 0.8, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
                                     self.centerController.view.frame.origin.x = 0
@@ -100,6 +97,9 @@ class ContainerViewController: UIViewController {
           print("this is notification")
 
         case .Settings:
+            let controller = SettingsViewController()
+            controller.titles = "Muraino "
+            present(UINavigationController(rootViewController: controller), animated: true, completion: nil)
             print("this is settings")
 
             

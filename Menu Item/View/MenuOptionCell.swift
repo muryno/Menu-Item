@@ -38,6 +38,7 @@ class MenuOptionCell: UITableViewCell {
         backgroundColor = .darkGray
         
         addSubview(iconImageView)
+        selectionStyle = .none
         iconImageView .translatesAutoresizingMaskIntoConstraints = false
         iconImageView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive  = true
         iconImageView.leftAnchor.constraint(equalTo: leftAnchor, constant: 12).isActive = true

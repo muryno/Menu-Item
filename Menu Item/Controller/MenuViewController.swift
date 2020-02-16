@@ -40,6 +40,7 @@ class MenuViewController: UIViewController {
         uiTableView.separatorStyle = .none
         uiTableView.backgroundColor = .darkGray
         
+        
         uiTableView.rowHeight = 60
         view.addSubview(uiTableView)
         
@@ -65,6 +66,7 @@ extension MenuViewController : UITableViewDelegate , UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: dequeIdentifier, for: indexPath) as! MenuOptionCell
+        
         
         let menuOption = MenuOption(rawValue: indexPath.row)
         cell.descriptionLable.text = menuOption?.description

@@ -18,6 +18,7 @@
 		0471ACE323F6BDB3001B205A /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0471ACE223F6BDB3001B205A /* Protocols.swift */; };
 		0471ACE523F74962001B205A /* MenuOptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0471ACE423F74962001B205A /* MenuOptionCell.swift */; };
 		0471ACE723F7D52E001B205A /* MenuOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0471ACE623F7D52E001B205A /* MenuOption.swift */; };
+		0471ACE923F8D88F001B205A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0471ACE823F8D88F001B205A /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		0471ACE223F6BDB3001B205A /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		0471ACE423F74962001B205A /* MenuOptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuOptionCell.swift; sourceTree = "<group>"; };
 		0471ACE623F7D52E001B205A /* MenuOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuOption.swift; sourceTree = "<group>"; };
+		0471ACE823F8D88F001B205A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				0471ACD723F69CDA001B205A /* MenuViewController.swift */,
 				0471ACD923F69CF8001B205A /* ContainerViewController.swift */,
 				0471ACDB23F69D05001B205A /* HomeViewController.swift */,
+				0471ACE823F8D88F001B205A /* SettingsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 				0471ACE323F6BDB3001B205A /* Protocols.swift in Sources */,
 				0471ACDA23F69CF8001B205A /* ContainerViewController.swift in Sources */,
 				0471ACC323F69C7E001B205A /* SceneDelegate.swift in Sources */,
+				0471ACE923F8D88F001B205A /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
