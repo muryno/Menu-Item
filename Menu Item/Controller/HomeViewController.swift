@@ -37,6 +37,6 @@ class HomeViewController: UIViewController {
     
     @objc func handleMenuToggle(){
         print("toggle")
-        delegate?.handleMenuToggle()
+        delegate?.handleMenuToggle(formenuOption : nil)
     }
 }

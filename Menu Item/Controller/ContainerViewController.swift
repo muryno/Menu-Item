@@ -11,7 +11,7 @@ import UIKit
 class ContainerViewController: UIViewController {
 
     //MARK:- properties
-    var menuController : UIViewController!
+    var menuController : MenuViewController!
     var centerController : UIViewController!
     
     var isExpandable : Bool = false
@@ -47,7 +47,7 @@ class ContainerViewController: UIViewController {
     }
     
     
-    func showMenuController(shouldExpand : Bool){
+    func didSelected(shouldExpand : Bool, menuOptions: MenuOption?){
         if shouldExpand{
             UIView.animate(withDuration: 0.8, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
                 self.centerController.view.frame.origin.x = self.centerController.view.frame.width - 80
@@ -56,7 +56,19 @@ class ContainerViewController: UIViewController {
             UIView.animate(withDuration: 0.8, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
                         self.centerController.view.frame.origin.x = 0
                     }, completion: nil)
+            
+            
+                UIView.animate(withDuration: 0.8, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
+                                    self.centerController.view.frame.origin.x = 0
+                }) { (Bool) in
+                    
+                    guard let menuOption = menuOptions else{
+                        return
+                    }
+                    self.didSelectMenuOption( menuOption: menuOption)
+            }
         }
+        
     }
     
     
@@ -64,7 +76,7 @@ class ContainerViewController: UIViewController {
     func configureMenuController(){
         if menuController == nil{
             menuController = MenuViewController()
-            
+            menuController.delegate = self
             view.insertSubview(menuController.view, at: 0)
             addChild(menuController)
             menuController?.didMove(toParent: self)
@@ -76,23 +88,45 @@ class ContainerViewController: UIViewController {
     
   
     
-    
+    func didSelectMenuOption( menuOption: MenuOption){
+        switch menuOption{
+            
+        case .Proile:
+            print("this is profile")
+        case .Inbox:
+        print("this is inbox")
+
+        case .Notifications:
+          print("this is notification")
+
+        case .Settings:
+            print("this is settings")
+
+            
+    }
+    }
 
 
 }
 
 extension ContainerViewController : HomeControllerDelegate{
-      func handleMenuToggle(){
-        
-        if !isExpandable{
-            configureMenuController()
-        }
-        
-        isExpandable = !isExpandable
-        
-        showMenuController(shouldExpand: isExpandable)
+  
+    
+    func handleMenuToggle(formenuOption menuOption: MenuOption?) {
+              if !isExpandable{
+              configureMenuController()
+          }
+       
 
-        
+          
+          isExpandable = !isExpandable
+          
+        didSelected(shouldExpand: isExpandable,menuOptions : menuOption)
+
+          
     }
+    
+ 
   }
+
 

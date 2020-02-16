@@ -68,8 +68,8 @@
 			children = (
 				0471ACE123F6BD9F001B205A /* Utils */,
 				0471ACD623F69CC4001B205A /* Controller */,
-				0471ACD523F69CBC001B205A /* View */,
 				0471ACD423F69CB1001B205A /* Model */,
+				0471ACD523F69CBC001B205A /* View */,
 				0471ACC023F69C7E001B205A /* AppDelegate.swift */,
 				0471ACC223F69C7E001B205A /* SceneDelegate.swift */,
 				0471ACC623F69C7E001B205A /* Main.storyboard */,

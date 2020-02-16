@@ -13,6 +13,10 @@ private let dequeIdentifier = "menuOtionnCell"
 class MenuViewController: UIViewController {
 
     
+    var delegate : HomeControllerDelegate?
+
+    
+    
     var uiTableView : UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,6 +72,12 @@ extension MenuViewController : UITableViewDelegate , UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let menuOption = MenuOption(rawValue: indexPath.row)
+        
+        delegate?.handleMenuToggle(formenuOption: menuOption)
+
+    }
     
     
 }
